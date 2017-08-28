@@ -10,7 +10,7 @@ const linkStyle = {
 };
 
 const Nav = () => (
-  <div style={{textAlign: 'center'}}>
+  <div>
     <Link href="/">
       <a style={linkStyle}>Home</a>
     </Link>

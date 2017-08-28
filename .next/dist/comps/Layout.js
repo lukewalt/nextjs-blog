@@ -24,16 +24,21 @@ var layoutStyle = {
 };
 
 var Layout = function Layout(props) {
-  return _react2.default.createElement('div', { style: layoutStyle, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    }
-  }, _react2.default.createElement(_Nav2.default, {
+  return _react2.default.createElement('div', {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     }
-  }), props.children);
+  }, _react2.default.createElement(_Nav2.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    }
+  }), _react2.default.createElement('div', { style: layoutStyle, __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
+  }, props.children));
 };
 
 exports.default = Layout;

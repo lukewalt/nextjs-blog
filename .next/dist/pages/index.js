@@ -22,8 +22,7 @@ var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-blog/pages/index.
 
 
 var PostLink = function PostLink(props) {
-  return _react2.default.createElement('li', {
-    __source: {
+  return _react2.default.createElement('li', { style: postStyle, __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     }
@@ -31,8 +30,7 @@ var PostLink = function PostLink(props) {
       fileName: _jsxFileName,
       lineNumber: 9
     }
-  }, _react2.default.createElement('a', {
-    __source: {
+  }, _react2.default.createElement('a', { style: { textDecoration: 'none' }, __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     }
@@ -45,13 +43,11 @@ exports.default = function () {
       fileName: _jsxFileName,
       lineNumber: 17
     }
-  }, _react2.default.createElement('h1', {
-    __source: {
+  }, _react2.default.createElement('h1', { style: blogBanner, __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     }
-  }, 'My Blog'), _react2.default.createElement('ul', {
-    __source: {
+  }, 'My Blog'), _react2.default.createElement('ul', { style: { listStyle: 'none', padding: 0 }, __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     }
@@ -68,4 +64,17 @@ exports.default = function () {
       lineNumber: 22
     }
   })));
+};
+
+// styles
+
+
+var postStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+};
+
+var blogBanner = {
+  textAlign: 'center'
 };

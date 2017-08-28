@@ -9,9 +9,12 @@ const layoutStyle = {
 }
 
 const Layout = (props) => (
-  <div style={layoutStyle}>
+
+  <div>
     <Nav />
-    {props.children}
+    <div style={layoutStyle}>
+      {props.children}
+    </div>
   </div>
 )
 

@@ -25,7 +25,8 @@ var linkStyle = {
 };
 
 var Nav = function Nav() {
-  return _react2.default.createElement('div', { style: { textAlign: 'center' }, __source: {
+  return _react2.default.createElement('div', {
+    __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     }
