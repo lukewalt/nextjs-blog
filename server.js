@@ -7,10 +7,17 @@ const dev = process.env.NODE_ENV !== `production`;
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-app.prepare();
-.then(() => {
 
+app.prepare()
+.then(() => {
   const server = express();
+
+  // simply mapped a custom route to our existing page "/post". We have also mapped query params
+  server.get(`/p/:id`, (req, res) => {
+    const actualPage = `/post`;
+    const queryParams = { title: req.params.id };
+    app.render(req, res, actualPage, queryParams)
+  })
 
   server.get('*', (req, res) => {
     return handle(req, res);
