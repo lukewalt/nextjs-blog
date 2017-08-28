@@ -1,28 +1,37 @@
 'use strict';
 
 import Link from 'next/link';
-import Layout from '../comps/Layout'
+import Layout from '../comps/Layout';
+import fetch from 'isomorphic-unfetch';
 
-
-const PostLink = (props) => (
-  <li style={postStyle}>
-    <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
-      <a style={{textDecoration: 'none'}}>{props.title}</a>
-    </Link>
-  </li>
-)
-
-
-export default () => (
+const Index = (props) => (
   <Layout>
-    <h1 style={blogBanner} >My Blog</h1>
+    <h1 style={blogBanner}>My Blog</h1>
     <ul style={{listStyle: 'none', padding: 0}}>
-      <PostLink id="hello-nextjs" title="Hello Next.js" />
-      <PostLink id="learn-nextjs" title="Learn Next.js is great" />
-      <PostLink id="deploy-nextjs" title="Deploy apps with Zeit" />
+      {props.shows.map(({ show }) => (
+        <li key={show.id} style={postStyle} >
+          <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
+            <a style={{textDecoration: 'none'}}>{show.name}</a>
+          </Link>
+        </li>
+      ))}
     </ul>
   </Layout>
 )
+
+Index.getInitialProps = async function() {
+  const res = await fetch(`https://api.tvmaze.com/search/shows?q=batman`);
+  const data = await res.json();
+
+  console.log(`Data fetched. COUNT: ${data}`);
+
+  return {
+    shows: data
+  }
+
+}
+
+export default Index
 
 // styles
 const postStyle = {
