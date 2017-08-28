@@ -14,17 +14,23 @@ var _Layout2 = _interopRequireDefault(_Layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-exmpl/pages/about.js?entry';
+var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-blog/pages/post.js?entry';
 
-exports.default = function () {
+exports.default = function (props) {
   return _react2.default.createElement(_Layout2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }, _react2.default.createElement('p', { style: { textAlign: 'center' }, __source: {
-      fileName: _jsxFileName,
       lineNumber: 7
     }
-  }, 'About Page'));
+  }, _react2.default.createElement('h1', {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    }
+  }, props.url.query.title), _react2.default.createElement('p', {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    }
+  }, 'This is the blog post content.'));
 };

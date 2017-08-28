@@ -11,6 +11,7 @@ const layoutStyle = {
 const Layout = (props) => (
   <div style={layoutStyle}>
     <Nav />
+    {props.children}
   </div>
 )
 

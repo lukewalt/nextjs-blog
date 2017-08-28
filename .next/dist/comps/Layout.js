@@ -14,7 +14,7 @@ var _Nav2 = _interopRequireDefault(_Nav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-exmpl/comps/Layout.js';
+var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-blog/comps/Layout.js';
 
 
 var layoutStyle = {
@@ -33,7 +33,7 @@ var Layout = function Layout(props) {
       fileName: _jsxFileName,
       lineNumber: 13
     }
-  }));
+  }), props.children);
 };
 
 exports.default = Layout;

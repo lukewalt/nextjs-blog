@@ -4,6 +4,6 @@ import Layout from '../comps/Layout'
 
 export default () => (
   <Layout>
-    <p style={{textAlign: 'center'}}>About Page</p>
+    <h1>About Page</h1>
   </Layout>
 )

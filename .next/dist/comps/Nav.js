@@ -14,7 +14,7 @@ var _link2 = _interopRequireDefault(_link);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-exmpl/comps/Nav.js';
+var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-blog/comps/Nav.js';
 
 
 var linkStyle = {

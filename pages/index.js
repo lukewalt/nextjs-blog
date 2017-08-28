@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Layout from '../comps/Layout'
 
 
-const postLink = (props) => (
+const PostLink = (props) => (
   <li>
     <Link href={`/post?title=${props.title}`}>
       <a>{props.title}</a>
