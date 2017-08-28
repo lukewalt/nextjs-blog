@@ -1,21 +1,27 @@
 'use strict';
 
 import Layout from '../comps/Layout';
+import fetch from 'isomorphic-unfetch'
 
 // every page will get a prop called url with related details
 // in this case a query obj with query string params
-const Content = (props) => (
+const Post = (props) => (
   <div>
-    <h1>{props.url.query.title}</h1>
-    <p>This is the blog post content.</p>
+    <h1>{props.show.name}</h1>
+    <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+    <img src={props.show.image.medium} />
   </div>
 )
 
-// url prop is only exposed to the page's main component [exp def].
-// if you need, you can pass it into the tag
+//the first argument of the function in the context object. It has a query field that we can use to fetch information
+Post.getInitialProps = async function(context) {
+  const { id } = context.query;
+  const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
+  const show = await res.json();
 
-export default (props) => (
-  <Layout>
-    <Content url={props.url}/>
-  </Layout>
-)
+  console.log(`Fetched show : ${show.name}`);
+
+  return { show }
+}
+
+export default Post
