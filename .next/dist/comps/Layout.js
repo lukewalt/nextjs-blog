@@ -17,26 +17,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-blog/comps/Layout.js';
 
 
-var layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
-
 var Layout = function Layout(props) {
   return _react2.default.createElement('div', {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 7
     }
   }, _react2.default.createElement(_Nav2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 8
     }
-  }), _react2.default.createElement('div', { style: layoutStyle, __source: {
+  }), _react2.default.createElement('div', {
+    __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 9
     }
   }, props.children));
 };
