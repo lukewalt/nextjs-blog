@@ -113,7 +113,9 @@ exports.default = Index;
 // styles
 
 var postStyle = {
-  margin: 20,
-  padding: 20,
+  width: 200,
+  height: 200,
+  margin: 10,
+  padding: 10,
   border: '1px solid #DDD'
 };

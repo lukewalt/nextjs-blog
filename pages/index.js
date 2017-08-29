@@ -39,7 +39,9 @@ export default Index
 
 // styles
 const postStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+  width: 200,
+  height: 200,
+  margin: 10,
+  padding: 10,
+  border: '1px solid #DDD',
 }

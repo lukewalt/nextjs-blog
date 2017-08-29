@@ -17,7 +17,7 @@ const Nav = () => (
       <a style={blogBanner}>My Blog</a>
     </Link>
     <Link href="/about">
-      <a style={linkStyle}>About</a>
+      <a style={linkStyle}>Profile</a>
     </Link>
   </div>
 )

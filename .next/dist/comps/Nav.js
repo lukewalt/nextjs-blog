@@ -52,7 +52,7 @@ var Nav = function Nav() {
       fileName: _jsxFileName,
       lineNumber: 20
     }
-  }, 'About')));
+  }, 'Profile')));
 };
 
 exports.default = Nav;
