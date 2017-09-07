@@ -14,26 +14,8 @@ export default () => (
       body {
         font-family: 'Source Sans Pro', sans-serif;
         color: #444;
+        margin: 0;
       }
-      ul {
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-      li {
-        list-style: none;
-        margin: 5px 0;
-      }
-      a {
-        color: '#1c9963',
-        textTransform: 'uppercase',
-        textDecoration: 'none',
-      }
-      a:hover {
-        opacity: 0.6;
-      }
-
     `}</style>
   </div>
 

@@ -17,40 +17,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/Users/LukeWoodward/workspace/backend/next-blog/comps/Nav.js';
 
 
-var linkStyle = {
-  color: '#1c9963',
-  textTransform: 'uppercase',
-  textDecoration: 'none'
-};
-
 var Nav = function Nav() {
   return _react2.default.createElement('div', { style: navStyle, __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 7
     }
   }, _react2.default.createElement(_link2.default, { href: '/about', __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 8
     }
   }, _react2.default.createElement('a', { style: linkStyle, __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 9
     }
   }, 'About')), _react2.default.createElement(_link2.default, { href: '/', __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 11
     }
   }, _react2.default.createElement('a', { style: blogBanner, __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 12
     }
   }, 'My Blog')), _react2.default.createElement(_link2.default, { href: '/about', __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 14
     }
   }, _react2.default.createElement('a', { style: linkStyle, __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 15
     }
   }, 'Profile')));
 };
@@ -74,4 +68,10 @@ var navStyle = {
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: 20
+};
+
+var linkStyle = {
+  color: '#1c9963',
+  textTransform: 'uppercase',
+  textDecoration: 'none'
 };

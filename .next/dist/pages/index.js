@@ -24,13 +24,13 @@ var _Layout = require('../comps/Layout');
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _isomorphicUnfetch = require('isomorphic-unfetch');
-
-var _isomorphicUnfetch2 = _interopRequireDefault(_isomorphicUnfetch);
-
 var _Head = require('../comps/Head');
 
 var _Head2 = _interopRequireDefault(_Head);
+
+var _isomorphicUnfetch = require('isomorphic-unfetch');
+
+var _isomorphicUnfetch2 = _interopRequireDefault(_isomorphicUnfetch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43,35 +43,32 @@ var Index = function Index(props) {
       fileName: _jsxFileName,
       lineNumber: 9
     }
-  }, _react2.default.createElement(_Head2.default, {
+  }, _react2.default.createElement(_Layout2.default, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     }
-  }), _react2.default.createElement(_Layout2.default, {
-    __source: {
+  }, _react2.default.createElement('div', { style: showsGrid, __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     }
-  }, _react2.default.createElement('ul', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    }
   }, props.shows.map(function (_ref) {
     var show = _ref.show;
-    return _react2.default.createElement('li', { key: show.id, style: postStyle, __source: {
+    return _react2.default.createElement('div', { key: show.id, style: postStyle, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      }
+    }, _react2.default.createElement('img', { src: show.image.medium, __source: {
         fileName: _jsxFileName,
         lineNumber: 14
       }
-    }, _react2.default.createElement(_link2.default, { as: '/p/' + show.id, href: '/post?id=' + show.id, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      }
-    }, _react2.default.createElement('a', {
-      __source: {
+    }), _react2.default.createElement(_link2.default, { as: '/p/' + show.id, href: '/post?id=' + show.id, __source: {
         fileName: _jsxFileName,
         lineNumber: 16
+      }
+    }, _react2.default.createElement('a', { style: link, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
       }
     }, show.name)));
   }))));
@@ -94,7 +91,7 @@ Index.getInitialProps = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerat
         case 5:
           data = _context.sent;
 
-          console.log('Data fetched. COUNT: ' + data);
+          console.log('Data fetched: ' + data);
 
           return _context.abrupt('return', {
             shows: data
@@ -112,10 +109,26 @@ exports.default = Index;
 
 // styles
 
+var showsGrid = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center'
+};
+
 var postStyle = {
   width: 200,
-  height: 200,
+  height: 350,
   margin: 10,
-  padding: 10,
-  border: '1px solid #DDD'
+  border: '1px solid #DDD',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  textAlign: 'center'
+};
+
+var link = {
+  color: '#1c9963',
+  textTransform: 'uppercase',
+  textDecoration: 'none',
+  padding: 5
 };

@@ -2,8 +2,6 @@
 
 import Layout from '../comps/Layout';
 import fetch from 'isomorphic-unfetch';
-import Markdown from 'react-markdown';
-
 
 // every page will get a prop called url with related details
 // in this case a query obj with query string params

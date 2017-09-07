@@ -2,11 +2,6 @@
 
 import Link from 'next/link';
 
-const linkStyle = {
-  color: '#1c9963',
-  textTransform: 'uppercase',
-  textDecoration: 'none'
-};
 
 const Nav = () => (
   <div style={navStyle}>
@@ -17,7 +12,7 @@ const Nav = () => (
       <a style={blogBanner}>My Blog</a>
     </Link>
     <Link href="/about">
-      <a style={linkStyle}>Profile</a>
+      <a style={linkStyle} >Profile</a>
     </Link>
   </div>
 )
@@ -42,3 +37,10 @@ const navStyle = {
   alignItems: 'center',
   padding: 20,
 }
+
+
+const linkStyle = {
+  color: '#1c9963',
+  textTransform: 'uppercase',
+  textDecoration: 'none'
+};
