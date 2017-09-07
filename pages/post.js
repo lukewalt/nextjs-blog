@@ -9,24 +9,24 @@ import fetch from 'isomorphic-unfetch';
 const Post = (props) => (
   <div>
     <Head />
+    <Layout>
     <div className="cont">
-      <h1>{props.show.name}</h1>
       <div className="info">
         <img src={props.show.image.medium} />
         <div className="summary">
+          <h1>{props.show.name}</h1>
           <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
           <p>Premiered: { props.show.premiered}</p>
           {props.show.genres.map( genre => (
             <p className="genre">{genre}</p>
           ))}
         </div>
-
-
       </div>
     </div>
+    </Layout>
     <style jsx>{`
       img {
-        height: 300px;
+        height: 75vh;
         width: auto;
         border-radius: 3px;
       }

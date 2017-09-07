@@ -19,19 +19,21 @@ const Profile = (props) => (
     </Layout>
     <style jsx>{`
       .usePage {
-        height: 100vh;
-        background: linear-gradient(#1c9963, #37ad7a);
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .userImg {
         border-radius: 50%;
-        height: 75px;
+        height: 100px;
+        border: 10px solid rgba(28, 153, 99, 0.27);
       }
       .userBanner {
-        color: white;
+        color: #1c9963;
         text-align: center;
+      }
+      .userBanner:nth-last-child(1) {
+        text-transform: capitalize;
       }
       `}</style>
   </div>
