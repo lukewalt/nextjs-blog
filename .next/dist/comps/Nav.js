@@ -38,7 +38,7 @@ var Nav = function Nav() {
       fileName: _jsxFileName,
       lineNumber: 12
     }
-  }, 'My Blog')), _react2.default.createElement(_link2.default, { href: '/about', __source: {
+  }, 'Batman Blog')), _react2.default.createElement(_link2.default, { href: '/profile', __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     }

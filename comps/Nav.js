@@ -9,9 +9,9 @@ const Nav = () => (
       <a style={linkStyle}>About</a>
     </Link>
     <Link href="/">
-      <a style={blogBanner}>My Blog</a>
+      <a style={blogBanner}>Batman Blog</a>
     </Link>
-    <Link href="/about">
+    <Link href="/profile">
       <a style={linkStyle} >Profile</a>
     </Link>
   </div>

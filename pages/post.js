@@ -1,15 +1,55 @@
 'use strict';
 
 import Layout from '../comps/Layout';
+import Head from '../comps/Head'
 import fetch from 'isomorphic-unfetch';
 
 // every page will get a prop called url with related details
 // in this case a query obj with query string params
 const Post = (props) => (
   <div>
-    <h1>{props.show.name}</h1>
-    <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-    <img src={props.show.image.medium} />
+    <Head />
+    <div className="cont">
+      <h1>{props.show.name}</h1>
+      <div className="info">
+        <img src={props.show.image.medium} />
+        <div className="summary">
+          <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+          <p>Premiered: { props.show.premiered}</p>
+          {props.show.genres.map( genre => (
+            <p className="genre">{genre}</p>
+          ))}
+        </div>
+
+
+      </div>
+    </div>
+    <style jsx>{`
+      img {
+        height: 300px;
+        width: auto;
+        border-radius: 3px;
+      }
+      .cont {
+        padding: 50px;
+
+      }
+      .info {
+        display: flex;
+
+      }
+      .info {
+        padding: 10px 70px;
+      }
+      .summary {
+
+      }
+      .genre {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    `}</style>
   </div>
 )
 

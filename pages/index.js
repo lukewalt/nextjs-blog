@@ -27,7 +27,7 @@ Index.getInitialProps = async function() {
   const res = await fetch(`https://api.tvmaze.com/search/shows?q=batman`);
   const data = await res.json();
 
-  console.log(`Data fetched: ${data}`);
+  console.log(JSON.parse(JSON.stringify(data[0])));
 
   return {
     shows: data

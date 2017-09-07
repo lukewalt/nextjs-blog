@@ -16,6 +16,13 @@ export default () => (
         color: #444;
         margin: 0;
       }
+      h1 {
+        font-family: 'Baloo Bhaijaan';
+        font-size: 3em;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
     `}</style>
   </div>
 
